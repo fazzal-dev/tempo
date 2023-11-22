@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>tempo.</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">tempo.</h1>
+    </header>
+    <main>
+      <!-- Search -->
+      <div class="input-container">
+        <input
+          type="text"
+          id="cityInput"
+          class="search-input"
+          placeholder="Enter city name..."
+        />
+        <button class="search-btn">Search</button>
+      </div>
+
+      <div class="loader" id="loader"></div>
+      <!-- Stats -->
+      <div class="weather-stats">
+        <div class="icon">
+          <img
+            id="weather-icon"
+            class="weather-icon"
+            src="icons/night/clear.svg"
+            alt="Weather Icon"
+          />
+        </div>
+        <h1 class="temp" id="temp">30&deg;C</h1>
+        <h3 class="description" id="description">Clear</h3>
+        <h2 class="city" id="city">Gujranwala, PK</h2>
+
+        <div class="weather-data">
+          <div class="humidity-container">
+            <span><img src="icons/humidity.png" alt="Humidity Icon" /></span>
+            <span class="humidity-data">
+              <h3 class="humidity-temp" id="humidity">68%</h3>
+              <h4 class="humidity-text">Humidity</h4>
+            </span>
+          </div>
+          <div class="wind-container">
+            <span><img src="icons/wind.png" alt="Wind Icon" /></span>
+            <span class="wind-data">
+              <h3 class="wind-speed" id="wind">2 Km/h</h3>
+              <h4 class="wind-text">Wind Speed</h4>
+            </span>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
