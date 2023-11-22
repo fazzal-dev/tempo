@@ -28,12 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const cityElement = document.getElementById("city");
   const humidity = document.getElementById("humidity");
   const wind = document.getElementById("wind");
-
   const weatherIcon = document.getElementById("weather-icon");
+
   const loader = document.getElementById("loader");
+  const staticData = document.querySelectorAll(".hidden");
   let isDayTime = false;
 
-  // Callback function to update the UI with weather data
   const updateWeatherUI = (data) => {
     temperature.textContent = `${Math.round(data.main.temp)}\u00B0C`;
     description.textContent = `${data.weather[0].main}`;
@@ -56,8 +56,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       hideLoader();
 
-      // Call the callback function to update the UI
       updateWeatherUI(data);
+
+      staticData.forEach((hiddenElements) => {
+        hiddenElements.classList.remove("hidden");
+      });
     } catch (error) {
       console.error("Error handling search:", error.message);
     }
@@ -103,3 +106,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   searchBtn.addEventListener("click", handleSearch);
 });
+
+const handleSearch = async () => {
+  try {
+    showLoader();
+    const city = cityInput.value.trim();
+    const data = await fetchWeatherData(city);
+
+    hideLoader();
+
+    updateWeatherUI(data);
+  } catch (error) {
+    console.error("Error handling search:", error.message);
+  }
+};
+
+searchBtn.addEventListener("click", handleSearch);
