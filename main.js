@@ -105,6 +105,11 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   searchBtn.addEventListener("click", handleSearch);
+  cityInput.addEventListener("keydown", (key) => {
+    if (key.key === "Enter") {
+      handleSearch();
+    }
+  });
 });
 
 const handleSearch = async () => {
