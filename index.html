@@ -1,55 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="main.js"></script>
-    <link rel="stylesheet" href="style.css" />
-    <title>tempo.</title>
-  </head>
-  <body>
-    <header>
-      <h1 class="logo">tempo.</h1>
-    </header>
-    <main>
-      <!-- Search -->
-      <div class="input-container">
-        <input
-          type="text"
-          id="cityInput"
-          class="search-input"
-          placeholder="Enter city name..."
-        />
-        <button class="search-btn">Search</button>
-      </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="main.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <title>tempo.</title>
+    </head>
+    <body>
+        <header>
+            <h1 class="logo">tempo.</h1>
+        </header>
+        <main>
+            <!-- Search -->
+            <div class="input-container">
+                <input
+                    type="text"
+                    id="cityInput"
+                    class="search-input"
+                    placeholder="Enter city name..."
+                />
+                <button class="search-btn">Search</button>
+            </div>
 
-      <div class="loader" id="loader"></div>
-      <!-- Stats -->
-      <div class="weather-stats">
-        <div class="icon">
-          <img id="weather-icon" class="weather-icon" src="" alt="" />
-        </div>
-        <h1 class="temp" id="temp"></h1>
-        <h3 class="description" id="description"></h3>
-        <h2 class="city" id="city"></h2>
+            <div class="loader" id="loader"></div>
+            <!-- Stats -->
+            <div class="weather-stats">
+                <div class="icon">
+                    <img id="weather-icon" class="weather-icon" src="" alt="" />
+                </div>
+                <h1 class="temp" id="temp"></h1>
+                <h3 class="description" id="description"></h3>
+                <h2 class="city" id="city"></h2>
 
-        <div class="weather-data">
-          <div class="humidity-container">
-            <span><img src="icons/humidity.png" class="hidden" alt="" /></span>
-            <span class="humidity-data">
-              <h3 class="humidity-temp" id="humidity"></h3>
-              <h4 class="humidity-text hidden">humidity</h4>
-            </span>
-          </div>
-          <div class="wind-container">
-            <span><img src="icons/wind.png" class="hidden" alt="" /></span>
-            <span class="wind-data">
-              <h3 class="wind-speed" id="wind"></h3>
-              <h4 class="wind-text hidden">Wind Speed</h4>
-            </span>
-          </div>
-        </div>
-      </div>
-    </main>
-  </body>
+                <div class="weather-data">
+                    <div class="humidity-container">
+                        <span
+                            ><img
+                                src="icons/humidity.png"
+                                class="hidden"
+                                alt=""
+                        /></span>
+                        <span class="humidity-data">
+                            <h3 class="humidity-temp" id="humidity"></h3>
+                            <h4 class="humidity-text hidden">humidity</h4>
+                        </span>
+                    </div>
+                    <div class="wind-container">
+                        <span
+                            ><img src="icons/wind.png" class="hidden" alt=""
+                        /></span>
+                        <span class="wind-data">
+                            <h3 class="wind-speed" id="wind"></h3>
+                            <h4 class="wind-text hidden">Wind Speed</h4>
+                        </span>
+                    </div>
+                </div>
+                <span id="errorLoadingWeather">Couldn't find that city 😢</span>
+            </div>
+        </main>
+    </body>
 </html>
