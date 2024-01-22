@@ -81,7 +81,7 @@ header {
 }
 
 .weather-data {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
