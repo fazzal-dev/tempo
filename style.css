@@ -81,9 +81,11 @@ header {
 }
 
 .weather-data {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   display: flex;
-  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 .humidity-container {
